@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-      <link
+    <link
       href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
@@ -21,26 +20,82 @@
     <link rel="stylesheet" href="style.css" />
     <title>Domineos</title>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+        
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <div class="b">
-      <!-- navbar section -->
-   this is the navbar
-      <i class="fa-solid fa-bars"></i>
-      <i class="fa-regular fa-compass"></i>  <h1 class="text-3xl font-bold underline text-clifford">
-      Hello world!
-    </h1>
-  
+    <!-- navbar -->
+    <div>
+      <div
+        class="flex justify-between items-center px-6 py-4 bg-white border-b"
+      >
+        <div class="flex items-center gap-10">
+          <div class="logo">
+            <img src="./Image/logo.png" alt="" />
+          </div>
+          <div class="flex items-center gap-6">
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              >Buy</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              >Sell</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              >Explore</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+            >Support</a
+          >
+          <button
+            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all"
+          >
+            Sign up or Log in
+          </button>
+        </div>
+      </div>
+   <!-- hero section -->
+        <section class="hero-section h-[554px] mt-4 flex flex-col items-center justify-center " >
+
+          <p class="text-6xl text-white max-w-[672px] text-center">Take your first step to online success.
+          </p>
+         <div>
+            <form class="mt-16">
+              <div class="w-[576px]">
+                <div class="flex max-w-xl ">
+                  <div class="flex rounded-md overflow-hidden w-full ">
+                    <input type="text" class="w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]" placeholder="Find your next premium domain" />
+                    <button class="bg-primary-red text-white px-6 text-lg font-semibold py-4 rounded-r-md">
+                      <img src="./Image/search.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      
+        </section>
+        
+      
     </div>
   </body>
 </html>
