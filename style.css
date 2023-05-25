@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.bg-primary-red {
+    background: #FA3600; 
+}
+.bg-primary-gray {
+    background: #F8F8F8;
+}
+.border-gray{
+    border: 1px solid #E8E9EA;
+}
