@@ -15,7 +15,11 @@
       href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />-->
+<!--    <script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>-->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Domineos</title>
@@ -35,52 +39,56 @@
   <body>
     <!-- navbar -->
     <div>
-      <div
+      <section
         class="flex justify-between items-center px-6 py-4 bg-white border-b"
       >
         <div class="flex items-center gap-10">
           <div class="logo">
             <img src="./Image/logo.png" alt="" />
           </div>
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6 hidden md:block">
             <a
               href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
               >Buy</a
             >
             <a
               href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
               >Sell</a
             >
             <a
               href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
               >Explore</a
             >
           </div>
         </div>
-        <div class="flex items-center gap-6">
+
+        <div class="flex items-center gap-6 hidden md:block">
           <a
             href=""
             class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
             >Support</a
           >
           <button
-            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all"
+            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all ms-6"
           >
             Sign up or Log in
           </button>
         </div>
-      </div>
+        <div class="block md:hidden">
+          menu toggle
+        </div>
+      </section>
    <!-- hero section -->
         <section class="hero-section h-[554px] mt-4 flex flex-col items-center justify-center " >
 
-          <p class="text-6xl text-white max-w-[672px] text-center">Take your first step to online success.
+          <p class="text-4xl  text-white max-w-[672px] text-center f-family-syne lg:text-6xl">Take your first step to online success.
           </p>
          <div>
             <form class="mt-16">
-              <div class="w-[576px]">
+              <div class=" w-[300px] md:w-[300px] lg:w-[450px] xl:w-[540px]">
                 <div class="flex max-w-xl ">
                   <div class="flex rounded-md overflow-hidden w-full ">
                     <input type="text" class="p-3 w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]" placeholder="Find your next premium domain" />
@@ -94,6 +102,81 @@
           </div>
       
         </section>
+
+<!-- explore section -->
+      <div class=" container mx-auto px-4 mt-8 md:mt-12 ">
+        <div class="flex items-center flex-col gap-3">
+          <h3 class="text-4xl text-center">Explore domains listed</h3>
+          <p class="  text-base max-w-[600px]  text-center ">Take a deep dive and browse domains for sale, original neighborhood photos, resident reviews and local insights to find what is right for you.</p>
+        </div>
+        <div class="grid  2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-6 mt-10 md:mt-16">
+        <div class="card-wrapper mb-6 2xl:mb-0 ">
+          <div class=" w-full relative">
+             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+            </div>
+            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+            <div class="flex items-center gap-2 mt-2">
+              <img src="./Image/person.svg" alt="">
+              <p class="text-base leading-5 ">Mark Twain</p>
+            </div>
+            <button class="p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
+          </div>
+          <div class="card-wrapper  mb-6 2xl:mb-0 ">
+          <div class=" w-full relative">
+             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3  ">apiquick.com</p>
+            </div>
+            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+            <div class="flex items-center gap-2 mt-2">
+              <img src="./Image/person.svg" alt="">
+              <p class="text-base leading-5 ">Mark Twain</p>
+            </div>
+          </div>
+          
+          <div class="card-wrapper  mb-6 2xl:mb-0  ">
+          <div class=" w-full relative">
+             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+            </div>
+            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+            <div class="flex items-center gap-2 mt-2">
+              <img src="./Image/person.svg" alt="">
+              <p class="text-base leading-5 ">Mark Twain</p>
+            </div>
+          </div>
+
+
+          <div class="card-wrapper  mb-6 2xl:mb-0 ">
+          <div class=" w-full relative">
+             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+            </div>
+            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+            <div class="flex items-center gap-2 mt-2">
+              <img src="./Image/person.svg" alt="">
+              <p class="text-base leading-5 ">Mark Twain</p>
+            </div>
+        </div> 
+         <div class="card-wrapper  mb-6 2xl:mb-0">
+          <div class=" w-full relative">
+             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+            </div>
+            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+            <div class="flex items-center gap-2 mt-2">
+              <img src="./Image/person.svg" alt="">
+              <p class="text-base leading-5 ">Mark Twain</p>
+            </div>
+        </div>
+      </div>
+
+
+
+
+      <script>
+
+      </script>
         
       
     </div>
