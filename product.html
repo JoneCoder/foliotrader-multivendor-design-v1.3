@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />-->
+<!--    <script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Domineos</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+        
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div>
+      <section
+        class="flex justify-between items-center px-6 py-4 bg-white border-b"
+      >
+        <div class="flex items-center gap-10">
+          <div class="logo">
+            <img src="./Image/logo.png" alt="" />
+          </div>
+          <div class="flex items-center gap-6 hidden md:block">
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+              >Buy</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+              >Sell</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+              >Explore</a
+            >
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 hidden md:block">
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+            >Support</a
+          >
+          <button
+            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all ms-6"
+          >
+            Sign up or Log in
+          </button>
+        </div>
+        <div class="block md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </section>
+   <!-- google com -->
+        <section class=" mt-4 flex flex-col items-center justify-center bg-[#F8F8F8] p-10 m-4 rounded" >
+       <p class="text-4xl f-family-syne font-semibold">google.com</p>
+       <p class="text-lg max-w-[750px] text-center mt-6">All the encrypted storage you need. Includes Dropbox Transfer, Backup, and eSignatures at no extra cost.</p>
+        </section>
+
+        <!-- offer section -->             
+        <section class="grid   lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-4 gap-4">
+         <div class="p-8 flex flex-col items-center justify-center bg-[#F8F8F8] rounded">
+            <h3 class="text-3xl f-family-syne font-bold text-center">Make an offer</h3>
+            <p class="text-2xl f-family-syne font-semibold text-center mt-7">We’re open to hear it</p>
+            <p class="text-sm max-w-[380px] text-center mt-7">Taking time to send us your best offer might worth it. Let us know your offer.</p>
+            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Make an offer</button>
+         </div> 
+          <div class="p-8 flex flex-col items-center justify-center bg-[#F8F8F8] rounded ">
+            <h3 class="text-3xl f-family-syne font-bold text-center">Buy now</h3>
+            <p class="text-5xl f-family-syne font-semibold text-center mt-7">$27,021.00</p>
+            <p class="text-sm max-w-[380px] text-center mt-7">The checkout process is very quick and easy. Grab it before anyone else!.</p>
+            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Buy now</button>
+         </div>  
+          <div class="p-8 flex flex-col items-center justify-center bg-[#F8F8F8] rounded ">
+            <h3 class="text-3xl f-family-syne font-bold text-center">Financing</h3>
+            <p class="text-2xl f-family-syne font-semibold text-center mt-7">From $2,252/mo</p>
+            <p class="text-sm max-w-[380px] text-center mt-7">The financing amount is based on 12 months and full price..</p>
+            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Get in touch</button>
+         </div>
+        </section>
+
+    <!--  footer section -->
+     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+      <table class="table-auto w-full md:overflow-auto">
+        <thead>
+          <tr>
+            <th class="text-start pb-4">Real Estate Markets</th>
+            <th class="text-start pb-4">Popular Searches         </th>
+            <th class="text-start pb-4">Explore Trulia</th>
+            <th class="text-start pb-4">For Professionals</th>               
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alaska Real Estate</td>
+            <td>Condos for Sale Near Me</td>
+            <td class="flex items-center gap-4"><i class="fa-brands fa-facebook-f"></i> <p>Facebook</p></td>
+            <td>Popular Counties </td>
+          </tr>
+          <tr>
+            <td>Alabama Real Estate</td>
+            <td>Townhomes for Sale Near Me</td>
+            <td class="flex items-center gap-4"><i class="fa-brands fa-twitter"></i> <p>Twitter</p></td>
+            <td>Rental Communities</td>
+          </tr>
+          <tr>
+            <td>Arkansas Real Estate</td>
+            <td>Apartments for Rent Near Me</td>
+            <td class="flex items-center gap-4"><i class="fa-brands fa-instagram"></i> <p>Instagram</p></td>
+            <td>Real Estate Leads</td>
+          </tr>
+           <tr>
+            <td>Arizona Real Estate</td>
+            <td>Open Houses Near Me</td>
+            <td class="flex items-center gap-4"><i class="fa-brands fa-pinterest"></i> <p>Pinterest</p></td>
+            <td></td>
+          </tr> 
+          <tr>
+            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
+            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
+            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
+          
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+     </section> 
+     
+     <!-- bottom  content -->
+     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+     <p class="text-sm leading-5 font-bold">Trulia is a registered Trademark of Zillow, Inc. Zillow, Inc. holds real estate brokerage <span class="text-[#FA3600] border-b border-[#FA3600]">licenses</span> in all 50 states and D.C. and Zillow (Canada) Inc. holds real estate brokerage licenses in multiple provinces.</p>
+     <div>
+   <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">   § 442-H New York Standard Operating Procedures 
+    </p> <br>
+    <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">New York Fair Housing Notice</p><br>
+    <p>TREC:<span class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm"> Information about brokerage services, Consumer protection notice
+      </span></p>
+      <p>California DRE #1522444</p>
+      <p class="text-[#FA3600] border-b border-[#FA3600] inline-block font-bold">Contact Zillow, Inc Brokerage</p>
+     </div>
+   
+     <div class="flex items-center gap-1 mt-10 mb-10 flex-wrap">
+      <p class="mr-4">Zillow Group ® Other Brands:</p>
+     <i class="fa-solid fa-circle text-[6px]"></i> 
+     <span>Zillow</span>  
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>StreetEasy</span> 
+       <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>HotPads</span> 
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Out East</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Privacy Portal</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
+     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
+    </div> 
+    <div class="flex items-center flex-wrap gap-1  mt-10 mb-10">
+      <p class="mr-4">Trulia Corporate</p>
+     <i class="fa-solid fa-circle text-[6px]"></i>
+     <span>About Zillow Group</span>  
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Fair Housing Guide</span> 
+       <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Careers</span> 
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Newsroom</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Investor Relations</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Advertising Terms</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Privacy</span>
+      <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Terms of Use</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Listings Quality Policy</span>  
+      <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Subscription Terms</span>
+      <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Help</span>
+      <i class="fa-solid fa-circle text-[6px] "></i>
+     <span>Privacy Portal</span>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <i class="fa-solid fa-circle text-[6px] "></i>
+     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
+     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
+    </div>
+    <p class="mt-10 mb-10">Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please let us know.</p> 
+       <p class="mt-10 mb-10">Copyright © 2023 Trulia, LLC. All rights reserved. Equal Housing Opportunity. Have a Question? Visit our Help Center to find the answer.</p>
+     </section>
+
+  </body>
+</html>
