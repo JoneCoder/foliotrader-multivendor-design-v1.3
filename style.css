@@ -25,3 +25,9 @@ body{
 .f-family-syne{
     font-family: 'Syne', sans-serif;
 }
+
+.menu-left-class{
+    left: 0 !important;
+   
+    transition: all .7s;
+}
