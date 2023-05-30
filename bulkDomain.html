@@ -23,7 +23,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Domineos</title>
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
     <script>
+      
       tailwind.config = {
         theme: {
           extend: {
@@ -91,7 +93,33 @@
            <div class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-cart-plus mr-4"></i>Orders</div> 
 
             <div class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-briefcase mr-4"></i>My domains </div> 
-             <div class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-angle-down mr-4"></i></i>Dashboard</div>
+
+
+             <div class="flex items-center  hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full  font-medium"  type="button" data-dropdown-toggle="dropdown">  <div class="">
+    
+              <button class=" font-medium rounded-lg  text-center inline-flex items-center py-4 px-7 w-full"><i class="fa-solid fa-angle-down mr-4 text-lg	 "></i>Dropdown button </button>
+          
+              <!-- Dropdown menu -->
+              <div class="hidden  text-base z-50 list-none divide-y divide-gray-100  my-4" id="dropdown">
+                 
+                  <ul class="px-10" aria-labelledby="dropdown">
+                  <li>
+                      <a href="#" class=" text-gray-700 block px-4 py-2 rounded hover:text-red-600  hover:bg-[#FFF2EE] font-medium text-lg	 ">My profile</a>
+                  </li> 
+                   <li>
+                      <a href="#" class="  text-gray-700 block px-4 py-2 rounded hover:text-red-600  hover:bg-[#FFF2EE]  text-lg">Subscription</a>
+                  </li>
+                    <li>
+                      <a href="#" class="  text-gray-700 block px-4 py-2 rounded hover:text-red-600  hover:bg-[#FFF2EE] text-lg ">Payment Gateways</a>
+                  </li>
+          
+                  </ul>
+              </div>
+          </div></div>
+
+             
+         
+             
       </div>
       <!-- content -->
       <div class=" p-14  ms-[280px]">
@@ -119,7 +147,6 @@
       </div>
        
           </div>
-
 
       </div>
   </body>
