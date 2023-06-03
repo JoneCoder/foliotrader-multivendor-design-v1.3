@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />-->
+    <!--    <script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Domineos</title>
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div>
+      <section
+        class="flex justify-between items-center px-6 py-4 bg-white border-b"
+      >
+        <div class="flex items-center gap-10">
+          <div class="logo">
+            <img src="./Image/logo.png" alt="" />
+          </div>
+          <div class="flex items-center gap-6 hidden md:block">
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+              >Buy</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+              >Sell</a
+            >
+            <a
+              href=""
+              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+              >Explore</a
+            >
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 hidden md:block">
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+            >Support</a
+          >
+          <button
+            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-lg hover:bg-gray-800 hover:text-white transition-all ms-6"
+          >
+            Sign up or Log in
+          </button>
+        </div>
+        <div class="block md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </section>
+
+      <!-- layout -->
+      <!-- sidebar -->
+
+      <div
+        class="sidebar-wrapper border-r px-5 py-10 bg-[#E8E9EA] w-[280px] h-screen absolute left-0 top-20"
+      >
+        <div
+          class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"
+        >
+          <i class="fa-solid fa-grip mr-4"></i>Dashboard
+        </div>
+
+        <div
+          class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"
+        >
+          <i class="fa-solid fa-cart-plus mr-4"></i>Orders
+        </div>
+
+        <div
+          class="flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full mb-4 font-medium"
+        >
+          <i class="fa-solid fa-briefcase mr-4"></i>My domains
+        </div>
+
+        <div
+          class="flex items-center hover:bg-[#FFF2EE] rounded hover:text-red-600 w-full font-medium"
+          type="button"
+          data-dropdown-toggle="dropdown"
+        >
+          <div class="">
+            <button
+              class="font-medium rounded-lg text-center inline-flex items-center py-4 px-7 w-full"
+            >
+              <i class="fa-solid fa-angle-down mr-4 text-lg"></i>My settings
+            </button>
+
+            <!-- Dropdown menu -->
+            <div
+              class="hidden text-base z-50 list-none divide-y divide-gray-100 my-4"
+              id="dropdown"
+            >
+              <ul class="px-10" aria-labelledby="dropdown">
+                <li class="mb-4">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 rounded  border font-medium text-lg hover:border-b-black"
+                    >My profile</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 rounded hover:text-red-600 hover:border-b-black text-lg"
+                    >Subscription</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 rounded hover:text-red-600 hover:bg-[#FFF2EE] text-lg"
+                    >Payment Gateways</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="#"
+                    class="px-4 py-2 rounded-full text-red-600 bg-[#FFF2EE] text-lg inline-block"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="p-14 ms-[280px]">
+        <h3 class="text-3xl font-medium mb-4">Choose your payment method</h3>
+
+        <div class="border rounded-xl mt-9 p-6 md:p-10 text-center">
+          <div class="flex ">
+            <div class="flex gap-10">
+          <div class="p-6 bg-[#F8F8F8]  xl:max-w-[230px] rounded ">
+             <h1 class="f-family-syne text-xl font-semibold  mb-2 text-center">Starter</h1>
+             <p class="text-sm font-medium mb-5">For person that just starting</p>
+             <p class="text-4xl font-semibold">$9.99</p>
+             <ul class="mt-8">
+                <li class="border-b p-2 text-xs font-medium">Create Individual Domain Listings</li>
+                <li class="border-b p-2 text-xs font-medium">Sell For Fixed Price</li>
+                <li class="border-b p-2 text-xs font-medium">Paypal and Stripe integration</li>
+                <li class="border-b p-2 text-xs font-medium">Accept Bank Transfer Payments</li>
+                <li class="border-b p-2 text-xs font-medium">Use the ESCROW service</li>
+             </ul>
+             <button class="py-3 px-5 bg-[#FA3600] rounded text-white mt-10">Change plan</button>
+          </div>
+          <div class="w-[1px] bg-[#E8E9EA] my-10"></div>
+        </div>
+
+      <div class=" w-full flex items-center justify-center flex-col  ">
+       
+        <div class="w-[540px] pb-8 border-b">
+        <div class="border rounded-lg flex items-center p-8  w-full">
+        <img src="./Image/paypal.svg" alt="">
+        <p class="text-center w-full">Paga con Paypal</p>
+        </div>
+      </div> 
+   
+       <div class="w-[540px] pt-8">
+        <div class="border rounded-lg flex items-center p-8  w-full">
+        <img src="./Image/debitCard.svg" alt="">
+        <p class="text-center w-full">Pay with you credit/debit card</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -34,53 +34,95 @@
           },
         },
       };
+      function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    x.className.add = "menu-left-class";
+   
+  } else {
+    x.style.display = "block";
+  }
+}
     </script>
   </head>
   <body>
     <!-- navbar -->
     <div>
       <section
-        class="flex justify-between items-center px-6 py-4 bg-white border-b"
-      >
-        <div class="flex items-center gap-10">
-          <div class="logo">
-            <img src="./Image/logo.png" alt="" />
-          </div>
-          <div class="flex items-center gap-6 hidden md:block">
-            <a
-              href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
-              >Buy</a
-            >
-            <a
-              href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
-              >Sell</a
-            >
-            <a
-              href=""
-              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
-              >Explore</a
-            >
-          </div>
+      class="flex justify-between items-center px-6 py-4 bg-white border-b "
+    >
+      <div class="flex items-center gap-10">
+        <div class="logo">
+          <img src="./Image/logo.png" alt="" />
         </div>
-
         <div class="flex items-center gap-6 hidden md:block">
           <a
             href=""
-            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
-            >Support</a
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+            >Buy</a
           >
-          <button
-            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all ms-6"
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+            >Sell</a
           >
-            Sign up or Log in
-          </button>
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+            >Explore</a
+          >
         </div>
-        <div class="block md:hidden">
-          <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="flex items-center gap-6 hidden md:block">
+        <a
+          href=""
+          class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+          >Support</a
+        >
+        <button
+          class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
+        >
+          Sign up or Log in
+        </button>
+      </div>
+      <div class="block md:hidden">
+        <i class="fa-solid fa-bars" onclick="myFunction()"></i>
+      </div>
+     
+      <!-- responsive menu -->
+      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear " id="myLinks">
+         <div class="flex flex-col">
+          <div class="logo">
+            <img src="./Image/logo.png" alt="" />
+          </div>
+          <div class="p-3 flex flex-col gap-4 mt-8">
+            <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+            >Buy</a
+          >
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+            >Explore</a
+          >
+          <a
+          href=""
+          class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+          >Support</a
+        >
+        <button
+          class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
+        >
+          Sign up or Log in
+        </button>
         </div>
-      </section>
+         </div>
+      </div>
+
+    </section>
    <!-- google com -->
         <section class=" mt-4 flex flex-col items-center justify-center bg-[#F8F8F8] p-10 m-4 rounded" >
        <p class="text-4xl f-family-syne font-semibold">google.com</p>
@@ -93,19 +135,19 @@
             <h3 class="text-3xl f-family-syne font-bold text-center">Make an offer</h3>
             <p class="text-2xl f-family-syne font-semibold text-center mt-7">We’re open to hear it</p>
             <p class="text-sm max-w-[380px] text-center mt-7">Taking time to send us your best offer might worth it. Let us know your offer.</p>
-            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Make an offer</button>
+            <button class="transition-all bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Make an offer</button>
          </div> 
           <div class="p-8 flex flex-col items-center justify-center bg-[#F8F8F8] rounded ">
             <h3 class="text-3xl f-family-syne font-bold text-center">Buy now</h3>
             <p class="text-5xl f-family-syne font-semibold text-center mt-7">$27,021.00</p>
             <p class="text-sm max-w-[380px] text-center mt-7">The checkout process is very quick and easy. Grab it before anyone else!.</p>
-            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Buy now</button>
+            <button class="transition-all bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Buy now</button>
          </div>  
           <div class="p-8 flex flex-col items-center justify-center bg-[#F8F8F8] rounded ">
             <h3 class="text-3xl f-family-syne font-bold text-center">Financing</h3>
             <p class="text-2xl f-family-syne font-semibold text-center mt-7">From $2,252/mo</p>
             <p class="text-sm max-w-[380px] text-center mt-7">The financing amount is based on 12 months and full price..</p>
-            <button class="bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Get in touch</button>
+            <button class="transition-all bg-[#EAEAEA] pt-4 pb-4 w-full rounded text-lg font-medium mt-3 hover:bg-[#FA3600] hover:text-[#FFFFFF]">Get in touch</button>
          </div>
         </section>
 
@@ -126,28 +168,28 @@
         <!-- payment items -->
         <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
           <div class="grid xl:grid-cols-4  md:grid-cols-2  m-4 gap-4 p-6">
-           <div class="flex items-center justify-center gap-6">
+           <div class="flex items-center md:justify-center justify-between gap-6">
             <img src="./Image/Vector.png" alt="">
             <div>
                 <p class="text-xl font-semibold">Register date</p>
                 <p class="text-lg">26th October 2017</p>
             </div>
            </div> 
-           <div class="flex items-center justify-center gap-6">
+           <div class="flex items-center md:justify-center justify-between gap-6">
             <img src="./Image/Vector (1).png" alt="">
             <div>
                 <p class="text-xl font-semibold">Registrar provider</p>
                 <p class="text-lg">GoDaddy.com</p>
             </div>
            </div>
-            <div class="flex items-center justify-center gap-6">
+            <div class="flex items-center md:justify-center justify-between gap-6">
             <img src="./Image/Vector (2).png" alt="">
             <div>
                 <p class="text-xl font-semibold">Domain age</p>
                 <p class="text-lg">5 Years Old</p>
             </div>
            </div>
-            <div class="flex items-center justify-center gap-6">
+            <div class="flex items-center md:justify-center justify-between gap-6">
             <img src="./Image/Vector (3).png" alt="">
             <div>
                 <p class="text-xl font-semibold">Domain category</p>
@@ -155,122 +197,83 @@
             </div>
            </div>
           </div>
-          <div  class="p-11 border-t flex justify-center">
-          <p class="max-w-[800px] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          <div  class="md:p-11 p-8 border-t flex justify-center">
+          <p class="max-w-[800px] text-center font-medium text-sm leading-4 text-[rgba(0, 0, 0, 0.5)]">Elevate your brand with a premium domain. Boost credibility, attract customers, and unleash your online potential. Secure yours today!</p>
         </div>
         </section>
 
-    <!--  footer section -->
-     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
-      <table class="table-auto w-full md:overflow-auto">
-        <thead>
-          <tr>
-            <th class="text-start pb-4">Real Estate Markets</th>
-            <th class="text-start pb-4">Popular Searches         </th>
-            <th class="text-start pb-4">Explore Trulia</th>
-            <th class="text-start pb-4">For Professionals</th>               
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alaska Real Estate</td>
-            <td>Condos for Sale Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-facebook-f"></i> <p>Facebook</p></td>
-            <td>Popular Counties </td>
-          </tr>
-          <tr>
-            <td>Alabama Real Estate</td>
-            <td>Townhomes for Sale Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-twitter"></i> <p>Twitter</p></td>
-            <td>Rental Communities</td>
-          </tr>
-          <tr>
-            <td>Arkansas Real Estate</td>
-            <td>Apartments for Rent Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-instagram"></i> <p>Instagram</p></td>
-            <td>Real Estate Leads</td>
-          </tr>
-           <tr>
-            <td>Arizona Real Estate</td>
-            <td>Open Houses Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-pinterest"></i> <p>Pinterest</p></td>
-            <td></td>
-          </tr> 
-          <tr>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-          
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-     </section> 
-     
-     <!-- bottom  content -->
-     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
-     <p class="text-sm leading-5 font-bold">Trulia is a registered Trademark of Zillow, Inc. Zillow, Inc. holds real estate brokerage <span class="text-[#FA3600] border-b border-[#FA3600]">licenses</span> in all 50 states and D.C. and Zillow (Canada) Inc. holds real estate brokerage licenses in multiple provinces.</p>
-     <div>
-   <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">   § 442-H New York Standard Operating Procedures 
-    </p> <br>
-    <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">New York Fair Housing Notice</p><br>
-    <p>TREC:<span class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm"> Information about brokerage services, Consumer protection notice
-      </span></p>
-      <p>California DRE #1522444</p>
-      <p class="text-[#FA3600] border-b border-[#FA3600] inline-block font-bold">Contact Zillow, Inc Brokerage</p>
-     </div>
-   
-     <div class="flex items-center gap-1 mt-10 mb-10 flex-wrap">
-      <p class="mr-4">Zillow Group ® Other Brands:</p>
-     <i class="fa-solid fa-circle text-[6px]"></i> 
-     <span>Zillow</span>  
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>StreetEasy</span> 
-       <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>HotPads</span> 
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Out East</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy Portal</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
-     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
-    </div> 
-    <div class="flex items-center flex-wrap gap-1  mt-10 mb-10">
-      <p class="mr-4">Trulia Corporate</p>
-     <i class="fa-solid fa-circle text-[6px]"></i>
-     <span>About Zillow Group</span>  
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Fair Housing Guide</span> 
-       <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Careers</span> 
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Newsroom</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Investor Relations</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Advertising Terms</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Terms of Use</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Listings Quality Policy</span>  
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Subscription Terms</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Help</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy Portal</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
-     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
-    </div>
-    <p class="mt-10 mb-10">Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please let us know.</p> 
-       <p class="mt-10 mb-10">Copyright © 2023 Trulia, LLC. All rights reserved. Equal Housing Opportunity. Have a Question? Visit our Help Center to find the answer.</p>
-     </section>
+        <section class=" container mx-auto px-4  flex flex-col items-center" >
+          <h3 class="text-xl leading-6 text-center font-bold">Or search  your next domain</h3>
+          <div class="mt-4">
+            <form class="inline-block">
+              <div class=" w-[300px] md:w-[300px] lg:w-[450px] xl:w-[540px]">
+                <div class="flex max-w-xl ">
+                  <div class="flex rounded-md overflow-hidden w-full ">
+                    <input type="text" class=" bg-[#F5F6F7] p-3 w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]"  placeholder="Find your next premium domain" />
+                    <button class="bg-primary-red text-white px-6 text-lg font-semibold py-4 rounded-r-md hover:bg-red-700">
+                      <img src="./Image/search.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- bottom section -->
+        <section class=" container mx-auto px-4 mt-8 md:mt-12 mb-8 xl:mb-24 md:mb-16">
+          <div class="flex items-center flex-wrap justify-center gap-1 text-center">
+         <p class="text-2xl font-bold text-[#5B1400]">discover</p><img src="./Image/icons8-search 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">premium domains</p><img src="./Image/icons8-external-link 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to launch you business</p><img src="./Image/icons8-briefcase 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to live</p>
+        </div>
+        </section>
+        <!--  footer section -->
+    
+         
+         <!-- footer -->
+       <section class=" container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+        <div class="grid grid-cols-2 md:grid-cols-4  gap-4 md:gap-6">
+             <div class="justify-start md:justify-center">
+                <ul>
+                  <li class="font-bold text-lg leading-5 mb-4">Explore</li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Buy domains</a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Sell domains</a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">My account</a></li>
+                </ul>
+              </div>  
+               <div class="justify-start md:justify-center">
+                <ul>
+                  <li class="font-bold text-lg leading-5 mb-4">Company</li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">About us</a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Support</a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Contact us</a></li>
+                </ul>
+              </div> 
+               <div class="justify-start md:justify-center">
+                <ul>
+                  <li class="font-bold text-lg leading-5 mb-4">Social media</li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i> <p class="hover:text-blue-600">Facebook</p></a></li>
+                  <li class="font-normal text-sm mb-1">  <a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-twitter"></i> <p class="hover:text-blue-600">Twitter</p></a></li>
+                  <li class="font-normal text-sm mb-1"> <a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-instagram"></i> <p class="hover:text-blue-600">Instagram</p></a></li>
+                </ul>
+              </div>
+    
+              <div class="flex justify-start md:justify-center"> 
+                <ul>
+                  <li class="font-bold text-lg leading-5 mb-4">Policies</li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Terms of </a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Rental Communities</a></li>
+                  <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Real Estate Leads</a></li>
+                </ul>
+              </div>
+             
+        </div>
+       </section>
+    
+       <!-- copyright section -->
+        <section class=" mt-8 md:mt-12  flex justify-center bg-[#FF400C] py-7">
+          <p class="max-w-[530px] font-normal text-[10px] leading-3 text-center text-white">Copyright © 2023 GetDominios. All rights reserved. Have a Question? Visit our Help Center to find the answer.</p>
+        </section>
+    
+
 
   </body>
 </html>

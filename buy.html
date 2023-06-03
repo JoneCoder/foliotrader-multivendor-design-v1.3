@@ -34,19 +34,77 @@
           },
         },
       };
+
+      
+      function myFunction() {
+      
+      
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    x.className.add = "menu-left-class";
+
+   
+  } else {
+    x.style.display = "block";
+  }
+}
     </script>
   </head>
   <body>
     <!-- navbar -->
     <div>
       <section
-        class="flex justify-between items-center px-6 py-4 bg-white border-b"
-      >
-        <div class="flex items-center gap-10">
+      class="flex justify-between items-center px-6 py-4 bg-white border-b "
+    >
+      <div class="flex items-center gap-10">
+        <div class="logo">
+          <img src="./Image/logo.png" alt="" />
+        </div>
+        <div class="hidden md:block">
+        <div class="flex items-center gap-6 ">
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+            >Buy</a
+          >
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+            >Sell</a
+          >
+          <a
+            href=""
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
+            >Explore</a
+          >
+        </div>
+      </div>
+      </div>
+
+      <div class="flex items-center gap-6 hidden md:block">
+        <a
+          href=""
+          class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+          >Support</a
+        >
+        <button
+          class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
+        >
+          Sign up or Log in
+        </button>
+      </div>
+      <div class="block md:hidden">
+        <i class="fa-solid fa-bars" onclick="myFunction()"></i>
+      </div>
+     
+      <!-- responsive menu -->
+      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px] hidden ease-linear z-10 " id="myLinks">
+         <div class="flex flex-col">
           <div class="logo">
             <a href="/"><img src="./Image/logo.png" alt="" /></a>
           </div>
-          <div class="flex items-center gap-6 hidden md:block">
+          <div class="p-3 flex flex-col gap-4 mt-8">
             <a
               href="/buy.html"
               class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
@@ -68,281 +126,229 @@
         <div class="flex items-center gap-6 hidden md:block">
           <a
             href=""
-            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
-            >Support</a
+            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+            >Explore</a
           >
-          <button
-            class="border py-3 px-4 text-[18px] font-bold leading-5 rounded hover:bg-gray-800 hover:text-white transition-all ms-6"
-          >
-            Sign up or Log in
-          </button>
+          <a
+          href=""
+          class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+          >Support</a
+        >
+        <button
+          class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
+        >
+          Sign up or Log in
+        </button>
         </div>
-        <div class="block md:hidden">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </section>
-   <!-- hero section -->
-        <section class=" mt-4 flex flex-col items-center justify-center bg-[#F8F8F8] p-10 m-4" >
-       <p class="text-4xl f-family-syne font-semibold">Buy domains</p>
-       <p class="text-lg max-w-[750px] text-center mt-6">All the encrypted storage you need. Includes Dropbox Transfer, Backup, and eSignatures at no extra cost.</p>
-   
-        </section>
-
-<!-- explore section -->
-      <section class=" container mx-auto px-4 mt-8 md:mt-12 ">
-        <div class="flex items-center flex-col gap-3">
-          <h3 class="text-4xl text-center font-bold">Explore domains listed</h3>
-          <p class="  text-base max-w-[600px]  text-center ">Take a deep dive and browse domains for sale, original neighborhood photos, resident reviews and local insights to find what is right for you.</p>
-        </div>
-        <div class="grid  2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-6 mt-10 md:mt-16">
-        <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
-          <div class=" w-full relative">
-             <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
-             <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
-            </div>
-            <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
-            <div class="flex items-center gap-2 mt-2">
-              <img src="./Image/person.svg" alt="">
-              <p class="text-base leading-5 ">Mark Twain</p>
-            </div>
-            <button class="p-3 sm:p-4 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700">Buy domain</button>
-          </div>
-     
-
+         </div>
       </div>
 
-
-
-
-      <script>
-
-      </script>
-        
-      
     </section>
-    <!-- news letter -->
-    <section class=" container mx-auto px-4 mt-8 md:mt-12 flex flex-col items-center" >
-      <h3 class="text-lg leading-6 text-center font-bold">Sign up to our newsletter</h3>
-      <div class="mt-4">
+
+    <!-- seclect section -->
+
+    <section>
+      <div class="flex items-center gap-3 mt-6 border-b pb-6 px-4 flex-wrap xl:flex-nowrap">
+      <select class="form-select w-full px-3 sm:px-5 py-2 sm:py-4  border rounded   ">
+        <option selected>All categories</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>  <select class="form-select w-full px-3 sm:px-5 py-2 sm:py-4  border rounded   ">
+        <option selected>What extension</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>  <select class="form-select w-full px-3 sm:px-5 py-2 sm:py-4  border rounded-lg ">
+        <option selected>Length</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>  <select class="form-select w-full px-3 sm:px-5 py-2 sm:py-4  border rounded  ">
+        <option selected>Any price</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select> 
+    <select class="form-select w-full px-3 sm:px-5 py-2 sm:py-4  border rounded  ">
+        <option selected>Sort by</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+  
+    
+     
         <form class="inline-block">
           <div class=" w-[300px] md:w-[300px] lg:w-[450px] xl:w-[540px]">
             <div class="flex max-w-xl ">
               <div class="flex rounded-md overflow-hidden w-full ">
-                <input type="text" class=" bg-[#F5F6F7] p-3 w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]"  placeholder="Search for City, Neighborhood, Zip, County, School" />
-                <button class="bg-primary-red text-white px-6 text-lg font-semibold py-4 rounded-r-md">
+                <input type="text" class=" bg-[#F5F6F7] p-3 w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]"  placeholder="Find your next premium domain" />
+                <button class="bg-primary-red text-white px-6 text-lg font-semibold py-4 rounded-r-md hover:bg-red-700">
                   <img src="./Image/search.svg" alt="">
                 </button>
               </div>
             </div>
           </div>
         </form>
-      </div>
-    </section>
-    <!-- bottom section -->
-    <section class=" container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
-      <div class="flex items-center flex-wrap justify-center gap-1">
-     <p class="text-2xl font-bold text-[#5B1400]">discover</p><img src="./Image/icons8-search 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">premium domains</p><img src="./Image/icons8-external-link 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to launch you business</p><img src="./Image/icons8-briefcase 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to live</p>
-    </div>
-    </section>
-    <!--  footer section -->
-     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
-      <table class="table-auto w-full md:overflow-auto">
-        <thead>
-          <tr>
-            <th class="text-start pb-4">Real Estate Markets</th>
-            <th class="text-start pb-4">Popular Searches         </th>
-            <th class="text-start pb-4">Explore Trulia</th>
-            <th class="text-start pb-4">For Professionals</th>               
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alaska Real Estate</td>
-            <td>Condos for Sale Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-facebook-f"></i> <p>Facebook</p></td>
-            <td>Popular Counties </td>
-          </tr>
-          <tr>
-            <td>Alabama Real Estate</td>
-            <td>Townhomes for Sale Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-twitter"></i> <p>Twitter</p></td>
-            <td>Rental Communities</td>
-          </tr>
-          <tr>
-            <td>Arkansas Real Estate</td>
-            <td>Apartments for Rent Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-instagram"></i> <p>Instagram</p></td>
-            <td>Real Estate Leads</td>
-          </tr>
-           <tr>
-            <td>Arizona Real Estate</td>
-            <td>Open Houses Near Me</td>
-            <td class="flex items-center gap-4"><i class="fa-brands fa-pinterest"></i> <p>Pinterest</p></td>
-            <td></td>
-          </tr> 
-          <tr>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-            <td><div class="flex items-center gap-2 text-[#FA3600]">More <i class="fa-solid fa-chevron-down"></i></div></td>
-          
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-     </section> 
-     
-     <!-- bottom  content -->
-     <section class="container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
-     <p class="text-sm leading-5 font-bold">Trulia is a registered Trademark of Zillow, Inc. Zillow, Inc. holds real estate brokerage <span class="text-[#FA3600] border-b border-[#FA3600]">licenses</span> in all 50 states and D.C. and Zillow (Canada) Inc. holds real estate brokerage licenses in multiple provinces.</p>
-     <div>
-   <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">   § 442-H New York Standard Operating Procedures 
-    </p> <br>
-    <p class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm">New York Fair Housing Notice</p><br>
-    <p>TREC:<span class="text-[#FA3600] border-b border-[#FA3600] inline-block text-sm"> Information about brokerage services, Consumer protection notice
-      </span></p>
-      <p>California DRE #1522444</p>
-      <p class="text-[#FA3600] border-b border-[#FA3600] inline-block font-bold">Contact Zillow, Inc Brokerage</p>
-     </div>
+    
    
-     <div class="flex items-center gap-1 mt-10 mb-10 flex-wrap">
-      <p class="mr-4">Zillow Group ® Other Brands:</p>
-     <i class="fa-solid fa-circle text-[6px]"></i>
-     <span>Zillow</span>  
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>StreetEasy</span> 
-       <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>HotPads</span> 
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Out East</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy Portal</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
-     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
-    </div> 
-    <div class="flex items-center flex-wrap gap-1  mt-10 mb-10">
-      <p class="mr-4">Trulia Corporate</p>
-     <i class="fa-solid fa-circle text-[6px]"></i>
-     <span>About Zillow Group</span>  
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Fair Housing Guide</span> 
-       <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Careers</span> 
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Newsroom</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Investor Relations</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Advertising Terms</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Terms of Use</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Listings Quality Policy</span>  
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Subscription Terms</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Help</span>
-      <i class="fa-solid fa-circle text-[6px] "></i>
-     <span>Privacy Portal</span>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <i class="fa-solid fa-circle text-[6px] "></i>
-     <span class="text-[#FA3600]  inline-block font-bold">Do Not Sell or Share My Personal Information</span>
-     <i class="fa-solid fa-arrow-right ms-6 text-[#FA3600]"></i>
-    </div>
-    <p class="mt-10 mb-10">Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please let us know.</p> 
-       <p class="mt-10 mb-10">Copyright © 2023 Trulia, LLC. All rights reserved. Equal Housing Opportunity. Have a Question? Visit our Help Center to find the answer.</p>
+
+  </div>
+
+    </section>
+   <!-- hero section -->
+        <section class=" mt-4 flex flex-col items-center justify-center bg-[#F8F8F8] p-10 m-4 rounded-lg" >
+       <p class="text-4xl f-family-syne font-semibold">Buy domains</p>
+       <p class="text-lg font-normal leading-5 max-w-[750px] text-center mt-6">Elevate your brand with a premium domain. Boost credibility, attract customers, and unleash your online potential. Secure yours today!</p>
+   
+        </section>
+
+
+        <section class=" container mx-auto px-4 mt-8  ">
+         
+          <div class="grid  2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-6 mt-10 md:mt-16">
+          <div class="card-wrapper mb-6 2xl:mb-0 ">
+            <div class=" w-full relative">
+               <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+               <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+              </div>
+              <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./Image/person.svg" alt="">
+                <p class="text-base leading-5 ">Mark Twain</p>
+              </div>
+              <button class="py-3 sm:py-4 px-4 sm:px-5 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700 font-medium">Buy domain</button>
+            </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
+            <div class=" w-full relative">
+               <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+               <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+              </div>
+              <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./Image/person.svg" alt="">
+                <p class="text-base leading-5 ">Mark Twain</p>
+              </div>
+              <button class="py-3 sm:py-4 px-4 sm:px-5 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700 font-medium">Buy domain</button>
+            </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
+            <div class=" w-full relative">
+               <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+               <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+              </div>
+              <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./Image/person.svg" alt="">
+                <p class="text-base leading-5 ">Mark Twain</p>
+              </div>
+              <button class="py-3 sm:py-4 px-4 sm:px-5 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700 font-medium">Buy domain</button>
+            </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
+            <div class=" w-full relative">
+               <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+               <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+              </div>
+              <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./Image/person.svg" alt="">
+                <p class="text-base leading-5 ">Mark Twain</p>
+              </div>
+              <button class="py-3 sm:py-4 px-4 sm:px-5 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700 font-medium">Buy domain</button>
+            </div>  <div class="card-wrapper mb-6 2xl:mb-0 ">
+            <div class=" w-full relative">
+               <img src="./Image/cardImg.png" alt="" class="rounded-lg max-h-[224px] w-full">
+               <p class="text-sm uppercase text-[#FA3600] px-3 py-1 bg-white rounded-3xl inline-block absolute top-3 left-3 ">apiquick.com</p>
+              </div>
+              <h3 class="text-base leading-4 font-bold mt-2">$150.00</h3>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./Image/person.svg" alt="">
+                <p class="text-base leading-5 ">Mark Twain</p>
+              </div>
+              <button class="py-3 sm:py-4 px-4 sm:px-5 text-[18px] bg-primary-red rounded-lg mt-6 text-white hover:bg-red-700 font-medium">Buy domain</button>
+            </div> 
+         
+  
+        </div>
+  
+  
+  
+  
+        <script>
+  
+        </script>
+          
+        
+      </section>
+      <!-- news letter -->
+      <section class=" container mx-auto px-4 mt-8 xl:mt-20 md:mt-12 flex flex-col items-center" >
+        <h3 class="text-xl leading-6 text-center font-bold">Or search  your next domain</h3>
+        <div class="mt-4">
+          <form class="inline-block">
+            <div class=" w-[300px] md:w-[300px] lg:w-[450px] xl:w-[540px]">
+              <div class="flex max-w-xl ">
+                <div class="flex rounded-md overflow-hidden w-full ">
+                  <input type="text" class=" bg-[#F5F6F7] p-3 w-full rounded-md rounded-r-none placeholder-shown:ps-3 placeholder-shown:text-[#3B4144]"  placeholder="Find your next premium domain" />
+                  <button class="bg-primary-red text-white px-6 text-lg font-semibold py-4 rounded-r-md hover:bg-red-700">
+                    <img src="./Image/search.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- bottom section -->
+      <section class=" container mx-auto px-4 mt-8 md:mt-12  mb-8 xl:mb-24 md:mb-16">
+        <div class="flex items-center flex-wrap justify-center gap-1 text-center">
+       <p class="text-2xl font-bold text-[#5B1400]">discover</p><img src="./Image/icons8-search 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">premium domains</p><img src="./Image/icons8-external-link 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to launch you business</p><img src="./Image/icons8-briefcase 1.png" alt=""> <p class="text-2xl text-[#5B1400] font-bold">to live</p>
+      </div>
+      </section>
+      <!--  footer section -->
+  
+       
+       <!-- footer -->
+     <section class=" container mx-auto px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-4  gap-4 md:gap-6">
+           <div class="justify-start md:justify-center">
+              <ul>
+                <li class="font-bold text-lg leading-5 mb-4">Explore</li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Buy domains</a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Sell domains</a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">My account</a></li>
+              </ul>
+            </div>  
+             <div class="justify-start md:justify-center">
+              <ul>
+                <li class="font-bold text-lg leading-5 mb-4">Company</li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">About us</a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Support</a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Contact us</a></li>
+              </ul>
+            </div> 
+             <div class="justify-start md:justify-center">
+              <ul>
+                <li class="font-bold text-lg leading-5 mb-4">Social media</li>
+                <li class="font-normal text-sm mb-1"><a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i> <p class="hover:text-blue-600">Facebook</p></a></li>
+                <li class="font-normal text-sm mb-1">  <a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-twitter"></i> <p class="hover:text-blue-600">Twitter</p></a></li>
+                <li class="font-normal text-sm mb-1"> <a href="" class="flex items-center gap-4" class="hover:text-blue-600"><i class="fa-brands fa-instagram"></i> <p class="hover:text-blue-600">Instagram</p></a></li>
+              </ul>
+            </div>
+  
+            <div class="flex justify-start md:justify-center"> 
+              <ul>
+                <li class="font-bold text-lg leading-5 mb-4">Policies</li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Terms of </a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Rental Communities</a></li>
+                <li class="font-normal text-sm mb-1"><a href="" class="hover:text-blue-600">Real Estate Leads</a></li>
+              </ul>
+            </div>
+           
+      </div>
      </section>
+  
+     <!-- copyright section -->
+      <section class="container mx-auto px-4 mt-8 md:mt-12  flex justify-center bg-[#FF400C] py-7">
+        <p class="max-w-[530px] font-normal text-[10px] leading-3 text-center text-white">Copyright © 2023 GetDominios. All rights reserved. Have a Question? Visit our Help Center to find the answer.</p>
+      </section>
+   
 
   </body>
 </html>
