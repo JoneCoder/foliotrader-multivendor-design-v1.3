@@ -16,7 +16,7 @@ body{
     border: 1px solid #E8E9EA;
 }
 .hero-section{
-    background: url("/Image/hero.png") ;
+    background: url("./Image/hero.png") ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
