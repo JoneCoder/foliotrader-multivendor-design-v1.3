@@ -29,16 +29,28 @@ body{
 .menu-left-class{
     left: 0 !important;
    
-    transition: all .7s;
+    transition: all .5s;
 }
 .left-50-custom{
-left: -50% !important;
+left: -290px !important;
 transition: all .5s;
 }
 .left-0-custom{
     left: 20px !important;
+    transition: all .5s;
 }
 .margin-left-0-custom{
     margin-left: 0 !important;
-    transition: all .7s;
+    transition: all .5s;
+}
+.left-50-custom1{
+
+transition: all .5s;
+}
+.left-0-custom1{
+    transition: all .5s;
+}
+.margin-left-0-custom1{
+   
+    transition: all .5s;
 }

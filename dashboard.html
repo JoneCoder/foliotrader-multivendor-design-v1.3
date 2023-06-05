@@ -24,41 +24,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Domineos</title>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-        
-          },
-        },
-      };
-      function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    x.className.add = "menu-left-class";
-   
-  } else {
-    x.style.display = "block";
-  }
-}
-
-
-
-const sidebarToggle=(toggle)=>{
-  if(toggle=="toggle"){
-    document.getElementById("sidebar").classList.add("left-50-custom");
-    document.getElementById("toggleBtn").classList.add("left-0-custom");
-    document.getElementById("content").classList.add("margin-left-0-custom");
-  }
-
-
-}
-
-
+    <script src="index.js">
+ 
 
 
 const sidebars =document.getElementsByClassName('sidebar-item');
@@ -123,7 +90,7 @@ console.log(sidebars);
       </div>
      
       <!-- responsive menu -->
-      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear " id="myLinks">
+      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear z-50 " id="myLinks">
          <div class="flex flex-col">
           <div class="logo">
             <img src="./Image/logo.png" alt="" />
@@ -252,15 +219,14 @@ console.log(sidebars);
                   
                      <tr>
                   
-                     
-                    
+      
                       <td></td>
                    
                     </tr>
                   </tbody>
                 </table>
                </section> 
-               <i id="toggleBtn" class="fa-solid fa-angles-left text-3xl absolute top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle('toggle')" ></i>
+               <i id="toggleBtn" class="fa-solid fa-angles-left text-3xl fixed top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle(toggle=!toggle)" ></i>
           </div>
 
 
