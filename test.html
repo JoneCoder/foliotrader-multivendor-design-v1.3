@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Template</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles specific to the dashboard */
+  </style>
+</head>
+<body>
+  <div class="flex h-screen">
+    <div id="sidebar" class="w-64 bg-gray-800 text-white">
+      <div class="p-4">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+      </div>
+      <nav>
+        <ul class="p-2">
+          <li class="mb-2">
+            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Analytics</a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Reports</a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="main-content" class="flex-1 p-4">
+      <h2 class="text-xl font-bold mb-4">Welcome to the Dashboard!</h2>
+      <div class="bg-white rounded p-4 shadow">
+        <h3 class="text-lg font-bold mb-2">Recent Activities</h3>
+        <ul class="list-disc ml-6">
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle functionality
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+    const toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Toggle Sidebar';
+    toggleButton.className = 'fixed top-4 right-4 p-2 bg-gray-800 text-white rounded-md z-10';
+    document.body.appendChild(toggleButton);
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+      mainContent.classList.toggle('flex');
+      mainContent.classList.toggle('w-full');
+    });
+  </script>
+</body>
+</html>
