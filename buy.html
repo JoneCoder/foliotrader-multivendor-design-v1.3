@@ -55,26 +55,27 @@
     <!-- navbar -->
     <div>
       <section
-      class="flex justify-between items-center px-6 py-4 bg-white border-b "
-    >
+      class="flex justify-between items-center px-6 py-4 bg-white border-b ">
       <div class="flex items-center gap-10">
         <div class="logo">
-          <img src="./Image/logo.png" alt="" />
+            <a href="./index.html">
+                <img src="./Image/logo.png" alt="" />
+            </a>
         </div>
         <div class="hidden md:block">
         <div class="flex items-center gap-6 ">
           <a
-            href=""
+            href="./buy.html"
             class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
             >Buy</a
           >
           <a
-            href=""
+            href="./buy.html"
             class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
             >Sell</a
           >
           <a
-            href=""
+            href="./buy.html"
             class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ms-6"
             >Explore</a
           >
@@ -84,50 +85,61 @@
 
       <div class="flex items-center gap-6 hidden md:block">
         <a
-          href=""
+          href="./buy.html"
           class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
           >Support</a
         >
+          <button
+                  class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
+          >
+              <a href="./login.html">Log in</a>
+          </button>
+          or
         <button
-          class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
-        >
-          Sign up or Log in
-        </button>
+                  class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
+          >
+              <a href="./signup.html">Sign up</a>
+          </button>
       </div>
       <div class="block md:hidden">
         <i class="fa-solid fa-bars" onclick="myFunction()"></i>
       </div>
      
       <!-- responsive menu -->
-      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px] hidden ease-linear z-10 " id="myLinks">
-         <div class="flex flex-col">
-          <div class="logo">
-            <img src="./Image/logo.png" alt="" />
+      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear " id="myLinks">
+              <div class="flex flex-col">
+                  <div class="logo">
+                      <a href="/"><img src="./Image/logo.png" alt="" /></a>
+                  </div>
+                  <div class="p-3 flex flex-col gap-4 mt-8">
+                      <a
+                              href="./buy.html"
+                              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 ">
+                          Buy
+                      </a>
+                      <a
+                              href="./buy.html"
+                              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
+                      >Explore</a>
+                      <a
+                              href="./buy.html"
+                              class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
+                      >Support
+                      </a>
+                      <button
+                              class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
+                      >
+                          <a href="./login.html">Log in</a>
+                      </button>
+                      or
+                      <button
+                              class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
+                      >
+                          <a href="./signup.html">Sign up</a>
+                      </button>
+                  </div>
+              </div>
           </div>
-          <div class="p-3 flex flex-col gap-4 mt-8">
-            <a
-            href=""
-            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
-            >Buy</a
-          >
-          <a
-            href=""
-            class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600 "
-            >Explore</a
-          >
-          <a
-          href=""
-          class="text-[18px] font-bold leading-5 hover:text-blue-600 hover:border-b-2 hover:border-blue-600"
-          >Support</a
-        >
-        <button
-          class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
-        >
-          Sign up or Log in
-        </button>
-        </div>
-         </div>
-      </div>
 
     </section>
 
