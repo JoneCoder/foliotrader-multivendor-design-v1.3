@@ -19,10 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-<!--    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />-->
-<!--    <script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>-->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Domineos</title>
     <script src="index.js">
  
@@ -125,17 +124,30 @@ console.log(sidebars);
       <!-- sidebar -->
       
       <div id="sidebar" class="sidebar-wrapper border-r px-5 py-10 bg-[#F9F9F9] w-[280px] h-screen  md:top-[79px] top-[57px]  fixed left-0">
-        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-grip mr-4"></i>Dashboard</div>  
+        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <span class="material-symbols-outlined mr-4">
+          dashboard
+          </span> Dashboard</div>  
 
-        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-cart-plus mr-4"></i>Orders</div> 
+        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <span class="material-symbols-outlined mr-4">
+          shopping_basket
+          </span>Orders</div> 
 
-         <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-briefcase mr-4"></i>My domains </div>  
-          <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-plus-circle mr-4"></i>Add new domains </div> 
+         <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium">
+          <span class="material-symbols-outlined mr-4">
+            work
+            </span> My domains </div>  
+          <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> 
+            <span class="material-symbols-outlined mr-4">
+              add_circle
+              </span>
+            Add new domains </div> 
 
 
           <div class="sidebar-item flex items-center  hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full  font-medium"  type="button" data-dropdown-toggle="dropdown">  <div class="">
  
-           <button class=" font-medium rounded-lg  text-center inline-flex items-center py-4 px-7 w-full"><i class="fa-solid fa-angle-down mr-4 text-lg	 "></i>My profile </button>
+           <button class=" font-medium rounded-lg  text-center inline-flex items-center py-4 px-7 w-full"><span class="material-symbols-outlined mr-4 text-3xl">
+            stat_minus_1
+            </span> My profile </button>
        
            <!-- Dropdown menu -->
            <div class="hidden  text-base z-50 list-none divide-y divide-gray-100  my-4" id="dropdown">
@@ -226,7 +238,7 @@ console.log(sidebars);
                   </tbody>
                 </table>
                </section> 
-               <i id="toggleBtn" class="fa-solid fa-angles-left text-3xl fixed top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle(toggle=!toggle)" ></i>
+               <i id="toggleBtn" class="lg:hidden block fa-solid fa-angles-left text-3xl fixed top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle(toggle=!toggle)" ></i>
           </div>
 
 
