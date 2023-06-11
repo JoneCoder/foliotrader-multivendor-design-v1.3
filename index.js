@@ -18,7 +18,7 @@ tailwind.config = {
 // }
 
 let toggle2 = true;
-const solyman = (toggle2) => {
+const responsiveMenu = (toggle2) => {
   if (toggle2 == false) {
     document.getElementById("myLinks").classList.add("menu-left-class-0");
   } else {

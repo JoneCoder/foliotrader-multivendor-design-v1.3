@@ -24,16 +24,15 @@
 <!--    <script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>-->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Domineos</title>
-    <script src="index.js">
-
-    </script>
+   
   </head>
   <body>
     <!-- navbar -->
-    <div>
+    <div class="mt[102px]">
       <section
-      class="flex justify-between items-center px-6 py-4 bg-white border-b fixed left-0 top-0 w-full"
+      class="flex justify-between items-center px-6 py-4 bg-white border-b fixed left-0 top-0 w-full z-10"
     >
       <div class="flex items-center gap-10">
         <div class="logo">
@@ -71,11 +70,11 @@
         </button>
       </div>
       <div class="block md:hidden">
-        <i class="fa-solid fa-bars" onclick="myFunction()"></i>
+        <i class="fa-solid fa-bars" onclick="responsiveMenu(toggle2=!toggle2)"></i>
       </div>
      
       <!-- responsive menu -->
-      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear " id="myLinks">
+      <div class="absolute menu-left-class   top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  ease-linear z-50  " id="myLinks">
          <div class="flex flex-col">
           <div class="logo">
             <img src="./Image/logo.png" alt="" />
@@ -111,38 +110,55 @@
       <!-- sidebar -->
       
       <div id="sidebar" class="sidebar-wrapper border-r px-5 py-10 bg-[#F9F9F9] w-[280px] h-screen  md:top-[79px] top-[57px]  fixed left-0">
-        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-grip mr-4"></i>Dashboard</div>  
+        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <span class="material-symbols-outlined mr-4">
+          dashboard
+          </span> Dashboard</div>  
 
-        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-cart-plus mr-4"></i>Orders</div> 
+        <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <span class="material-symbols-outlined mr-4">
+          shopping_basket
+          </span>Orders</div> 
 
-         <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-briefcase mr-4"></i>My domains </div>  
-          <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> <i class="fa-solid fa-plus-circle mr-4"></i>Add new domains </div> 
+         <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium">
+          <span class="material-symbols-outlined mr-4">
+            work
+            </span> My domains </div>  
+          <div class="sidebar-item flex items-center py-4 px-7 hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full mb-4 font-medium"> 
+            <span class="material-symbols-outlined mr-4">
+              add_circle
+              </span>
+            Add new domains </div> 
+         <!-- dropdown -->
+      <div class="relative">
+        <button id="dropdownBtn" class="sidebar-item flex items-center  hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full  font-medium py-3 px-7">
+          <span class="material-symbols-outlined mr-4 text-3xl">
+            stat_minus_1
+            </span>
+          <span class="mr-1">My profile</span>
+         
+        </button>
+        <ul id="dropdownMenu" class="absolute hidden bg-[#F9F9F9] rounded-lg"  >
+          <li class="mb-4 ms-10">
+              <a href="#" class=" text-gray-700 block px-4 py-2 rounded-lg   font-medium text-lg	 "><span class="hover:border-b-2 border-black">My profile</span></a>
+          </li> 
+           <li class="mb-4 ms-10">
+      
+              <a href="#" class=" text-gray-700 block px-4 py-2 rounded-lg   font-medium text-lg	 "><span class="hover:border-b-2 border-black">Subscription</span></a>
+          </li>
+            <li class="mb-4 ms-10">
+              <a href="#" class=" text-gray-700 block px-4 py-2 rounded-lg   font-medium text-lg	 "><span class="hover:border-b-2 border-black">Payment Gateways</span></a>
+          </li>  
+           <li class="mb-4 ms-10">
+              <a href="#" class="    px-4 py-2 rounded-full text-red-600  bg-[#FFF2EE] text-lg inline-block ">Sign out</a>
+          </li>
+          
+  
+          </ul>
+    
+      </div>
+      
 
-
-          <div class="sidebar-item flex items-center  hover:bg-[#FFF2EE] rounded-lg hover:text-red-600 w-full  font-medium"  type="button" data-dropdown-toggle="dropdown">  <div class="">
- 
-           <button class=" font-medium rounded-lg  text-center inline-flex items-center py-4 px-7 w-full"><i class="fa-solid fa-angle-down mr-4 text-lg	 "></i>My profile </button>
-       
-           <!-- Dropdown menu -->
-           <div class="hidden  text-base z-50 list-none divide-y divide-gray-100  my-4" id="dropdown">
-              
-               <ul class=" bg-[#F9F9F9] rounded-lg" aria-labelledby="dropdown" >
-               <li class="mb-4 ms-10">
-                   <a href="#" class=" text-gray-700 block px-4 py-2 rounded-lg hover:text-red-600  hover:bg-[#FFF2EE] font-medium text-lg	 ">My profile</a>
-               </li> 
-                <li class="mb-4 ms-10">
-                   <a href="#" class="  text-gray-700 block px-4 py-2 rounded-lg hover:text-red-600  hover:bg-[#FFF2EE]  text-lg">Subscription</a>
-               </li>
-                 <li class="mb-4 ms-10">
-                   <a href="#" class="  text-gray-700 block px-4 py-2 rounded-lg hover:text-red-600  hover:bg-[#FFF2EE] text-lg ">Payment Gateways</a>
-               </li>  
-                <li class="mb-4 ms-10">
-                   <a href="#" class="    px-4 py-2 rounded-full text-red-600  bg-[#FFF2EE] text-lg inline-block ">Sign out</a>
-               </li>
-       
-               </ul>
-           </div>
-       </div></div>
+          
+      
           
    </div>
       <!-- content -->
@@ -170,11 +186,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                
-                
                      <tr>
-            
-                    
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
@@ -184,8 +196,12 @@
                       <td>test</td>
                       <td>
                         <div class="flex items-center gap-2">
-                          <i class="fa-regular fa-pen-to-square"></i>
-                          <i class="fa-solid fa-trash"></i>
+                          <span class="material-symbols-outlined">
+                            edit
+                            </span>
+                            <span class="material-symbols-outlined">
+                              delete_forever
+                              </span>
                         </div>
                       </td>
                    
@@ -195,18 +211,12 @@
                </section> 
           </div>
  
-          <i id="toggleBtn" class="fa-solid fa-angles-left text-3xl fixed top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle(toggle=!toggle)" ></i>
+          <i id="toggleBtn" class="lg:hidden block fa-solid fa-angles-left text-3xl fixed top-1/2 left-[280px] transform -translate-x-1/2 -translate-y-1/2  sidebar-toggle-button" onclick="sidebarToggle(toggle=!toggle)" ></i>
       </div>
 
-   
+      <script src="index.js">
 
-     
-
-   
-
-    
-
-  
+      </script>
   </body>
 </html>
 

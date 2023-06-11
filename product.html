@@ -23,34 +23,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Domineos</title>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-        
-          },
-        },
-      };
-      function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    x.className.add = "menu-left-class";
-   
-  } else {
-    x.style.display = "block";
-  }
-}
+    <script src="index.js">
+ 
     </script>
   </head>
   <body>
     <!-- navbar -->
-    <div>
+    <div class="md:mt-[102px] mt-[80px]">
       <section
-      class="flex justify-between items-center px-6 py-4 bg-white border-b "
+      class="flex justify-between items-center px-6 py-4 bg-white border-b fixed left-0 top-0 w-full z-10"
     >
       <div class="flex items-center gap-10">
         <div class="logo">
@@ -82,17 +63,17 @@
           >Support</a
         >
         <button
-          class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-lg-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
+          class="border py-3 px-4 text-[18px] font-bold leading-5 rounded-xl hover:bg-gray-800 hover:text-white transition-all ms-6"
         >
           Sign up or Log in
         </button>
       </div>
       <div class="block md:hidden">
-        <i class="fa-solid fa-bars" onclick="myFunction()"></i>
+        <i class="fa-solid fa-bars" onclick="responsiveMenu(toggle2=!toggle2)"></i>
       </div>
      
       <!-- responsive menu -->
-      <div class="absolute -left-2/3 menu-left-class  top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  hidden ease-linear " id="myLinks">
+      <div class="absolute menu-left-class   top-0 bg-slate-400 p-4 min-h-screen w-[250px] sm:w-[300px]  ease-linear z-50  " id="myLinks">
          <div class="flex flex-col">
           <div class="logo">
             <img src="./Image/logo.png" alt="" />
@@ -114,7 +95,7 @@
           >Support</a
         >
         <button
-          class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-lg-xl"
+          class="border py-3 px-4 text-[18px] font-bold leading-5  hover:bg-gray-800 hover:text-white mt-6 rounded-xl"
         >
           Sign up or Log in
         </button>
