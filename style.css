@@ -27,10 +27,16 @@ body{
 }
 
 .menu-left-class{
+    left: -500px !important;
+    
+    transition: all .5s;
+}
+.menu-left-class-0{
     left: 0 !important;
    
     transition: all .5s;
 }
+
 .left-50-custom{
 left: -290px !important;
 transition: all .5s;
@@ -54,3 +60,8 @@ transition: all .5s;
    
     transition: all .5s;
 }
+/* .menu-left-class{
+    left: 0 !important;
+   
+    transition: all .5s;
+} */

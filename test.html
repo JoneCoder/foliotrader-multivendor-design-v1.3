@@ -1,64 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Template</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Additional styles specific to the dashboard */
-  </style>
-</head>
-<body>
-  <div class="flex h-screen">
-    <div id="sidebar" class="w-64 bg-gray-800 text-white">
-      <div class="p-4">
-        <h1 class="text-2xl font-bold">Dashboard</h1>
-      </div>
-      <nav>
-        <ul class="p-2">
-          <li class="mb-2">
-            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Analytics</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Reports</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Settings</a>
-          </li>
-        </ul>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script></script>
+  </head>
+  <body>
+    <div class="relative">
+      <button
+        id="dropdownBtnOne"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+      >
+        <span class="mr-1">Dropdown</span>
+        <svg
+          class="fill-current h-4 w-4"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" />
+        </svg>
+      </button>
+      <ul id="dropdownMenuOne" class="absolute hidden text-gray-700 pt-1">
+        <li>
+          <a
+            class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+            href="#"
+            >Option 1</a
+          >
+        </li>
+        <li>
+          <a
+            class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+            href="#"
+            >Option 2</a
+          >
+        </li>
+        <li>
+          <a
+            class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+            href="#"
+            >Option 3</a
+          >
+        </li>
+      </ul>
     </div>
-    <div id="main-content" class="flex-1 p-4">
-      <h2 class="text-xl font-bold mb-4">Welcome to the Dashboard!</h2>
-      <div class="bg-white rounded p-4 shadow">
-        <h3 class="text-lg font-bold mb-2">Recent Activities</h3>
-        <ul class="list-disc ml-6">
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Consectetur adipiscing elit</li>
-          <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    // Sidebar toggle functionality
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('main-content');
-    const toggleButton = document.createElement('button');
-    toggleButton.innerText = 'Toggle Sidebar';
-    toggleButton.className = 'fixed top-4 right-4 p-2 bg-gray-800 text-white rounded-md z-10';
-    document.body.appendChild(toggleButton);
+    <script>
+      const dropdownBtnOne = document.getElementById("dropdownBtnOne");
+      const dropdownMenuOne = document.getElementById("dropdownMenuOne");
 
-    toggleButton.addEventListener('click', () => {
-      sidebar.classList.toggle('hidden');
-      mainContent.classList.toggle('flex');
-      mainContent.classList.toggle('w-full');
-    });
-  </script>
-</body>
+      dropdownBtnOne.addEventListener("click", () => {
+        dropdownMenuOne.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
